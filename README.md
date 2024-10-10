@@ -75,7 +75,7 @@
     <td>해당 품목의 일자 별 kg당 가격</td>
   </tr>
   <tr>
-    <td><strong><span>‼️ 품목 가격 산출 방식 ‼️ </span></strong></td>
+    <td><strong><span>품목 가격 산출 방식 </span></strong></td>
     <td>품목 또는 품종의 총 거래금액/총 거래량 (※취소된 거래내역(=TOT_QTY &lt; 0) 제외)</td>
   </tr>
 </table>
