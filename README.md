@@ -44,12 +44,12 @@
 | ~~SIZE_NM~~ | ~~크기~~ | • 컬럼 삭제 |
 | LV_NM | 등급 |  |
 | SAN_NM | 산지 | • **광역시도+시군구**<br/>&ensp;◦ (광역시도 = 시군구) ⇒ 광역시도<br/>•  ‘-’ 제외 |
-| DANQ   | 단위 중량 | • 거래 단위 ⇒ **숫자**  추출<br/>‼️  **0 인 경우 제외** |
+| DANQ   | 단위 중량 | • 거래 단위 ⇒ **숫자**  추출<br/> &ensp;◦ **0 인 경우 제외** |
 | QTY   | 물량 | • QTY(물량) = (**총 거래 금액** / 단가)<br/>&ensp;◦ TOT_AMT/COST=QTY |
-| COST   | 단가 | • COST(단가) = **(총 거래 금액 / 총 거래 물량 )** * 단위중량<br/>&ensp;◦ (TOT_AMT/TOT_QTY)*DANQ=COST<br/>‼️  **0 or Null인 경우 제외** |
-| ~~MEAN_COST~~ | ~~평균 가격~~ | • 컬럼 삭제<br/>‼️  **0 or Null인 경우 제외** |
-| TOT_QTY   | 총 물량 | • 음수로 집계된 값은 거래 취소 내역<br/>‼️  **0 or Null인 경우 제외** |
-| TOT_AMT   | 총 금액 | ‼️  **0 or Null인 경우 제외** |
+| COST   | 단가 | • COST(단가) = **(총 거래 금액 / 총 거래 물량 )** * 단위중량<br/>&ensp;◦ (TOT_AMT/TOT_QTY)*DANQ=COST<br/> &ensp;◦  **0 or Null인 경우 제외** |
+| ~~MEAN_COST~~ | ~~평균 가격~~ | • 컬럼 삭제<br/>  &ensp;◦ **0 or Null인 경우 제외** |
+| TOT_QTY   | 총 물량 | • 음수로 집계된 값은 거래 취소 내역<br/> &ensp;◦ **0 or Null인 경우 제외** |
+| TOT_AMT   | 총 금액 |  &ensp;◦ **0 or Null인 경우 제외** |
 
 - **train set**
 
