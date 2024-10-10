@@ -21,6 +21,8 @@
 | --- | --- |
 | **과일 품목** | **총 16가지** 사과, 참외, 귤, 바나나, 복숭아, 키위, 자두, 파인애플, 포도, 망고, 체리, 레몬, 블루베리, 수박 ,딸기, 메론 |
 
+![dataframe](https://github.com/user-attachments/assets/3537b7a8-6c3f-4f84-bc88-3069791d0bdf)
+
 <br/>
 
 ## 2. 데이터 전처리
@@ -58,17 +60,13 @@
 | **품목_가격(원/kg)** | 해당 품목의 일자 별 kg당 가격  |
 | **품목 가격 산출 방식** | 품목 또는 품종의 총 거래금액/총 거래량 (※취소된 거래내역(=TOT_QTY<0) 제외) |
 
+<br/>
 
 **2.2 Feature Engineering**
 
-사진
+![Feature Engineering Graph](https://github.com/user-attachments/assets/7327b0fa-0a12-4ca5-bf2d-e74a71c1a65c)
 
-| **COL** | **전처리** |
-| --- | --- |
-| **요일** | 요일 데이터가 월요일 ~ 일요일로 구성되어 **원-핫 인코딩 처리**를 해줌 |
-| **date** | 시계열 분석을 하기 위해 추세를 파악하고 **계절성 반영 및 패턴 분석**을 위해 feature 생성 |
-| **가격** | 거래가 발생하지 않는 주말을 제외한 공휴일도 거래가 발생하지 않아 거래가 발생하지 않은 날의 과일 가격(NULL값)을 **하루 전/후 평균 가격**으로 대체 |
-| **resid** | 가격의 특이값을 처리하기 위해 **분해 시계열의 잔차**를 feature로 생성 |
+![Feature Engineering](https://github.com/user-attachments/assets/19215d59-b0f3-4eba-a51c-0e4ec5acbc86)
 
 <br/>
 
@@ -76,7 +74,11 @@
 
 - **품목별 가격 / 거래량 변동**
 
+![EDA 가격거래량](https://github.com/user-attachments/assets/eaf12cfd-2f9b-4dc9-bbad-f96a741eaa90)
+
 - **품목별 가격 분포**
+
+![EDA 가격분포](https://github.com/user-attachments/assets/3af8e971-c574-4957-a986-1417bb9788b7)
 
 <br/>
 
@@ -84,7 +86,11 @@
 
 **4.1 RandomForest**
 
+![RandomForest Score](https://github.com/user-attachments/assets/de7de627-e57b-4ca6-b8be-07dc69417e4b)
+
 **4.2 XGBoost**
+
+![XGBoost Score](https://github.com/user-attachments/assets/25b6392d-e633-4af7-8402-e3c4d7634da0)
 
 **4.3 LSTM**
 ```
@@ -108,6 +114,8 @@ model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size, validation_data=(x_test, y_test), callbacks=[early_stopping], verbose=2)
 ```
+
+![LSTM Score](https://github.com/user-attachments/assets/8d6ae16c-272e-470c-b8f0-d361123f2648)
 
 **4.4 결과 분석** 
 
