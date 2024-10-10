@@ -93,7 +93,7 @@
 ![XGBoost Score](https://github.com/user-attachments/assets/25b6392d-e633-4af7-8402-e3c4d7634da0)
 
 **4.3 LSTM**
-```
+```py
 timesteps = 7
 x_lstm, y_lstm = create_sequences(x_scaled, y_scaled, timesteps)
 
